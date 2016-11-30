@@ -1,8 +1,8 @@
 /**
  * Created by mrxuso on 30/11/2016.
+ * The purpose of this class is to simply test the Collatz Class creating a new Collatz object
  */
 public class Main {
-
     private static final int START_NUMBER = 30;
 
     public static void main(String[] arg0){
