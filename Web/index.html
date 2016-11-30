@@ -12,25 +12,38 @@
         <style>
             form{
                 padding: 5%;
+                padding-top: 0;
+            }
+            
+            #number-input span, #number-input input{
+                border: 1px solid #fafafa;
             }
             
             h1{
-                padding: 15px;
+                padding: 5%;
+                color: #fafafa;
+            }
+            
+            body{
+                background-color: #263638
             }
         </style>
     </head>
     <body>
-        <h1>Collatz Number!</h1>
-    
-        <form>
-            <div class="input-group">
-                <span class="input-group-addon">Número natural</span>
-                <input type="text" class="form-control" placeholder="Introduzca un número natural" id="numero">
-            </div>
-            <br>
-            <button type="button" class="btn btn-primary" id="aceptar">Primary</button>
+        
+        <div class="container">
+            <h1>Collatz Number!</h1>
 
-        </form>
+            <form>
+                <div class="input-group" id="number-input">
+                    <span class="input-group-addon">Número natural</span>
+                    <input type="text" class="form-control" placeholder="Introduzca un número natural" id="numero">
+                </div>
+                <br>
+                <button type="button" class="btn btn-primary" id="aceptar">Primary</button>
+
+            </form>
+        </div>
 
         <!-- jQuery first, then Tether, then Bootstrap JS. -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
