@@ -61,15 +61,20 @@
             }
         
             $("#aceptar").click(function(){
-                var number = parseInt($("#numero").val());
-                var sequence = number + ' ';
+                var number = $("#numero").val();
                 
-                while (number > 1){
-                    sequence += nextNumber(number) + ' ';
-                    number = nextNumber(number)
+                if (number == '' || number < 1){
+                    alert("No has introducido un número correcto")
+                } else {
+                    var sequence = number + ' ';
+
+                    while (number > 1){
+                        sequence += nextNumber(number) + ' ';
+                        number = nextNumber(number)
+                    }
+
+                    alert(sequence)
                 }
-                
-                alert(sequence)
             });
         
         </script>
