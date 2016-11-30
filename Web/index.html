@@ -59,23 +59,35 @@
                     return 3 * number + 1;
                 }
             }
-        
-            $("#aceptar").click(function(){
+            
+            function showSequence(){
                 var number = $("#numero").val();
                 
                 if (number == '' || number < 1){
-                    alert("No has introducido un número correcto")
+                    alert("No has introducido un número correcto");
                 } else {
                     var sequence = number + ' ';
 
                     while (number > 1){
                         sequence += nextNumber(number) + ' ';
-                        number = nextNumber(number)
+                        number = nextNumber(number);
                     }
 
-                    alert(sequence)
+                    alert(sequence);
+                }
+            }
+            
+            $("#numero").keypress(function(e) {
+                //controlamos la tecla Return
+                if(e.which == 13) {
+                    showSequence();
                 }
             });
+        
+            $("#aceptar").click(function(){
+                showSequence();
+            });
+            
         
         </script>
     </body>
