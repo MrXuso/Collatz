@@ -13,3 +13,19 @@ int nextNumber(int number){
   }
   return number;
 }
+
+int main(void){
+  int firstNumber = 0;
+  printf("Introduce el primer número de la sucesión de Collatz a mostrar: ");
+  scanf("%d", &firstNumber);
+
+  //Mostramos la serie
+  printf("La serie de Collatz de %d es: ", firstNumber);
+
+  int number = firstNumber;
+  while (number > 1){
+    number = nextNumber(number);
+    printf("%d ", number);
+  }
+  return 0;
+}
