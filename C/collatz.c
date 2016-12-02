@@ -16,16 +16,17 @@ int nextNumber(int number){
 
 int main(void){
   int firstNumber = 0;
-  printf("Introduce el primer número de la sucesión de Collatz a mostrar: ");
+  printf("\nIntroduce el primer número de la sucesión de Collatz a mostrar: ");
   scanf("%d", &firstNumber);
 
   //Mostramos la serie
-  printf("La serie de Collatz de %d es: ", firstNumber);
+  printf("\nLa serie de Collatz de %d es: ", firstNumber);
 
   int number = firstNumber;
   while (number > 1){
     number = nextNumber(number);
     printf("%d ", number);
   }
+  printf("\n\n");
   return 0;
 }
